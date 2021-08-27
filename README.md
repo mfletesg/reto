@@ -22,7 +22,7 @@ Para testear la aplicacion hay 2 formas
 
 Ejemplo: http://localhost/reto/public/api/users
 
-2.- Se creo un una pagina en Laravel  para usar las api's, en este caso se uso XAMPP
+2.- Se creo una pagina en Laravel para usar las api's, en este caso se uso XAMPP
 
 Ejemplo: http://localhost/reto/public/
 
