@@ -17,11 +17,15 @@ El archivo donde se tiene el codigo del API es:
 https://github.com/mfletesg/reto/blob/main/routes/api.php
 
 Para testear la aplicacion hay 2 formar
+
 1.- Con peticiones desde Postman, montando el proyecto en un servidor Apache, en este caso se uso XAMPP
+
 Ejemplo: http://localhost/reto/public/api/users
 
-2.- Se creo un una pagina en Lavel  para usar las api's, en este caso se uso XAMPP
+2.- Se creo un una pagina en Laravel  para usar las api's, en este caso se uso XAMPP
+
 Ejemplo: http://localhost/reto/public/
+
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/mfletesg/reto/main/public/img/screen.png" alt="License">
