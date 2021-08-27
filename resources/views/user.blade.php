@@ -8,6 +8,10 @@
       <script src="{{ asset('js/user.js') }}" defer></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+
+      <script type="text/javascript">
+        var route  = "<?php echo asset(''); ?>"
+      </script>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -72,11 +76,29 @@
     </div>
   </div>
 
-
+  <hr>
   <div class="container">
     <div class="row">
       <h3>Quantifies</h3>
       <div id="quantifiesContainer"></div>
+    </div>
+  </div>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <h3>Coincidences</h3>
+      <input type="email" class="form-control" name="email_search" id="email_search" aria-describedby="name" placeholder="Enter email">
+      <button type="submit" class="btn btn-primary" onclick="searchEmail(event)">Search</button>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">email</th>
+          </tr>
+        </thead>
+        <tbody id="dataTableCoincidences">
+        </tbody>
+      </table>
     </div>
   </div>
 

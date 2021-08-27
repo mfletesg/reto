@@ -1,3 +1,4 @@
+console.log(route)
 async function saveUser(event){
   event.preventDefault()
   var name = document.getElementById('name').value
@@ -22,7 +23,7 @@ async function saveUser(event){
     'email' : email,
   }
 
-  fetch("/api/create/",
+  fetch(route +"api/create/",
   {
       method: "POST",
       headers: {
@@ -42,7 +43,7 @@ async function saveUser(event){
 
 
 function showUsers(){
-  fetch("/api/users/",
+  fetch(route +"api/users/",
   {
       method: "GET",
       headers: {
@@ -71,7 +72,7 @@ function showUsers(){
 
 function deleteUser(id){
   var data = {'id' : id }
-  fetch("/api/delete/",
+  fetch(route +"api/delete/",
   {
       method: "POST",
       headers: {
@@ -90,7 +91,7 @@ function deleteUser(id){
 
 
 function quantifiesContainer(){
-  fetch("/api/quantifies/",
+  fetch(route +"api/quantifies/",
   {
       method: "GET",
       headers: {
@@ -102,6 +103,32 @@ function quantifiesContainer(){
   .then(function(data){
     console.log(data);
     document.getElementById("quantifiesContainer").textContent = JSON.stringify(data);
+  })
+}
+
+function searchEmail(){
+  var email_search = document.getElementById('email_search').value
+  fetch(route +"api/coincidences/" + email_search,
+  {
+      method: "GET",
+      headers: {
+               'Accept': 'application/json',
+               'Content-Type': 'application/json',
+           }
+  })
+  .then(function(res){ return res.json(); })
+  .then(function(data){
+    html = ''
+    for(var i=0; i<data.length; i++){
+      html += '<tr>\
+                <th scope="row">'+data[i]['id']+'</th>\
+                <td>'+data[i]['email'].toLowerCase()+'</td>\
+              </tr>';
+    }
+    html += ''
+
+    console.log(html);
+    $("#dataTableCoincidences").html(html);
   })
 }
 
