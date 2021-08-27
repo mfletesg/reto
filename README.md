@@ -16,7 +16,7 @@ Las rutas de la API son las siguientes:
 El archivo donde se tiene el codigo del API es:
 https://github.com/mfletesg/reto/blob/main/routes/api.php
 
-Para testear la aplicacion hay 2 formar
+Para testear la aplicacion hay 2 formas
 
 1.- Con peticiones desde Postman, montando el proyecto en un servidor Apache, en este caso se uso XAMPP
 
